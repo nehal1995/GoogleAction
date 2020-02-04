@@ -10,16 +10,16 @@ if($method == 'POST'){
 	$text = $json->queryResult->parameters->text;
 
 	switch ($text) {
-		case 'Smoke':
+		case 'smoke':
 			$speech = "Hi, Let me run smoke test for you";
 			break;
 
-		case 'Regression':
+		case 'regression':
 			$speech = "Great running";
 			break;
 
-		case 'Everything':
-			$speech = "Yes, ruuning every test";
+		case 'do all test':
+			$speech = "Yes, running every test";
 			break;
 		
 		default:
