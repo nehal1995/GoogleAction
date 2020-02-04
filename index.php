@@ -7,19 +7,19 @@ if($method == 'POST'){
 	$requestBody = file_get_contents('php://input');
 	$json = json_decode($requestBody);
 
-	$text = $json->result->parameters->text;
+	$text = $json->queryResult->parameters->text;
 
 	switch ($text) {
-		case 'hi':
-			$speech = "Hi, Nice to meet you";
+		case 'Smoke':
+			$speech = "Hi, Let me run smoke test for you";
 			break;
 
-		case 'bye':
-			$speech = "Bye, good night";
+		case 'Regression':
+			$speech = "Great running";
 			break;
 
-		case 'anything':
-			$speech = "Yes, you can type anything here.";
+		case 'Everything':
+			$speech = "Yes, ruuning every test";
 			break;
 		
 		default:
